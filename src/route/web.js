@@ -8,6 +8,7 @@ let initWebRoutes = (app) => {
     //     return res.send("Hello Felix Nguyen");
     // })
     router.get("/", homeController.getHomePage);
+    router.get("/about", homeController.getAboutPage);
     // rest api
     router.get("/kuku", (req, res) => {
         return res.send("Hello Kuku")
