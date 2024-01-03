@@ -1,7 +1,7 @@
 
 
 let getHomePage = (req, res) => {
-    return res.send("Hi Home controller!")
+    return res.render('homepage.ejs')
 }
 
 module.exports = {
