@@ -1,5 +1,10 @@
 'use strict';
 
+import dotenv from "dotenv";
+
+// Load environment variables from .env file
+dotenv.config();
+
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
