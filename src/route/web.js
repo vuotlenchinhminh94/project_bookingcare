@@ -11,6 +11,7 @@ let initWebRoutes = (app) => {
     router.get("/about", homeController.getAboutPage);
     // rest api
     router.get("/crud", homeController.getCRUD);
+    router.post("/post-crud", homeController.postCRUD);
 
 
     return app.use("/", router)

@@ -12,7 +12,7 @@
         <div class="col-6">
             <form class="row g-3" action="/post-crud" method="POST">
                 <div class="col-md-6">
-                  <label for="validationDefault01" class="form-label">Email</label>
+                  <label class="form-label">Email</label>
                   <input type="text" class="form-control" name="email">
                 </div>
                 <div class="col-md-6">
@@ -24,7 +24,7 @@
                   <input type="text" class="form-control" name="firstName">
                 </div>
                 <div class="col-md-6">
-                  <label for="validationDefault02" class="form-label">Last name</label>
+                  <label class="form-label">Last name</label>
                   <input type="text" class="form-control" name="lastName">
                 </div>
                 <div class="col-md-12">
@@ -40,18 +40,16 @@
                 <div class="col-md-3">
                   <label class="form-label">Sex</label>
                   <select class="form-select" name="gender">
-                    <option selected disabled value="">Choose...</option>
                     <option value="1">Male</option>
                     <option value="0">Female</option>
                   </select>
                 </div>
                 <div class="col-md-3">
                     <label class="form-label">Role</label>
-                    <select class="form-select" name="gender">
-                      <option selected disabled value="">Choose...</option>
+                    <select class="form-select" name="role">
                       <option value="1">Admin</option>
-                      <option value="0">Doctor</option>
-                      <option value="0">Patient</option>
+                      <option value="2">Doctor</option>
+                      <option value="3">Patient</option>
                     </select>
                   </div>
                 <div class="col-12">
