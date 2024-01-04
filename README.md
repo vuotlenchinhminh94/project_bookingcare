@@ -19,3 +19,5 @@ npx sequelize-cli db:migrate
 👉 5. Tạo Seeder: npx sequelize-cli seed:generate --name demo-user  => execute seed file: npx sequelize-cli db:seed:all
 
 - Add "logging": false in config.json => not show query on terminal
+
+- npm i bcrypt  => hash password
