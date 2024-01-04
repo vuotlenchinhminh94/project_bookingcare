@@ -9,35 +9,51 @@
 </head>
 <body>
     <div class="container mt-4">
-        <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="col-6">
+            <form class="row g-3" action="/post-crud" method="POST">
+                <div class="col-md-6">
+                  <label for="validationDefault01" class="form-label">Email</label>
+                  <input type="text" class="form-control" name="email">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Password</label>
+                  <input type="text" class="form-control" name="password">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">First name</label>
+                  <input type="text" class="form-control" name="firstName">
+                </div>
+                <div class="col-md-6">
+                  <label for="validationDefault02" class="form-label">Last name</label>
+                  <input type="text" class="form-control" name="lastName">
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label">Address</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" name="address">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Phone number</label>
+                  <input type="text" class="form-control" name="phonenumber">
+                </div>
+                <div class="col-md-3">
+                  <label for="validationDefault04" class="form-label">Sex</label>
+                  <select class="form-select" name="gender">
+                    <option selected disabled value="">Choose...</option>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="validationDefault05" class="form-label">Role</label>
+                  <input type="text" name="role" class="form-control">
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+              </form>
+        </div>
     </div>
 </body>
 </html>
