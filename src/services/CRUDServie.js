@@ -36,6 +36,7 @@ let hashUserPassword = (password) => {
         }
     });
 }
+
 let getAllUser = (req, res) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -47,7 +48,54 @@ let getAllUser = (req, res) => {
     });
 }
 
+let getUserInfoById = (userId) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const user = await db.User.findOne({ 
+                where: { id: userId } 
+            });
+            // console.log(user);
+            if (user) {
+                resolve(user);
+            } else {
+                resolve([]);
+            }
+        } catch (error) {
+            reject(error)
+        }
+    });
+}
+
+let updateUserData = (data) => {
+    return new Promise(async (resolve, reject) => {
+        // console.log("data fron service");
+        // console.log(data);
+        try {
+            let user = await db.User.findOne({
+                where: {id: data.id}
+            });
+
+            if (user) {
+                user.firstName = data.firstName;
+                user.lastName = data.lastName;
+                user.address = data.address;
+                
+                await user.save();
+
+                let allUsers = await db.User.findAll();
+                resolve(allUsers);
+            } else {
+                resolve()
+            }
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
+
 module.exports = {
     createNewUser: createNewUser,
     getAllUser: getAllUser,
+    getUserInfoById: getUserInfoById,
+    updateUserData: updateUserData,
 };
