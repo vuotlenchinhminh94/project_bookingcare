@@ -22,7 +22,9 @@ let displayCRUD = async (req, res) => {
     });
     // console.log(data);
     // return res.send("display get CRUD");
-    return res.render("displayCRUD.ejs");
+    return res.render("displayCRUD.ejs", {
+        dataTable: data
+    });
 }
 
 let postCRUD = async (req, res) => {
